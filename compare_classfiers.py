@@ -55,15 +55,20 @@ print(scores)
 
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
+from IPython.display import display
+
 
 df = pd.DataFrame()
 df['name'] = names
 df['score'] = scores
-df
+# df.plot()
+plt.show()
 
 cm = sns.light_palette("green",as_cmap=True)
 s = df.style.background_gradient(cmap=cm)
-s
+display(s)
 
-sns.set(style="whitegrid")
-ax = sns.barplot(y="name",x="score",data=df)
+# sns.set(style="whitegrid")
+# ax = sns.barplot(y="name",x="score",data=df)
+# plt.show()
